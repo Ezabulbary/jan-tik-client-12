@@ -1,14 +1,49 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 import logo from '../../images/logo/logo.png'
+import Loading from './Loading';
 
 const NavBar = () => {
+    const [user, loading] = useAuthState(auth);
+
+    if (loading){
+        return <Loading></Loading>
+    }
+
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
+
     const menuItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+        {
+            user && <li><Link to='/dashboard'>Dashboard</Link></li>
+        }
+        {
+            user
+                ?
+                <div className="dropdown dropdown-end">
+                    <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={user?.photoURL} alt='profile-image' />
+                        </div>
+                    </label>
+                    <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <button className="btn btn-active">{user?.displayName}</button>
+                        <button className="btn" >Settings</button>
+                        <button className="btn" onClick={logout}>Sign Out</button>
+                    </ul>
+                </div>
+                :
+                <li><Link to="/login">Login</Link></li>
+        }
     </>
     return (
         <div className="navbar bg-neutral text-neutral-content">
