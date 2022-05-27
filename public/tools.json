@@ -1,6 +1,6 @@
 [
     {
-        "name": "screwdriver",
+        "name": "Screwdriver",
         "image": "https://i.ibb.co/HYL7f3c/screwdriver.png",
         "description": "Screwdriver / Nut Driver Set, 8 Bits (Phillips, Slotted, Torx, Square), 3 Nut Driver Sizes, Cushion Grip Handle",
         "min_order_quantity": 1000,
@@ -18,7 +18,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "sandpaper",
+        "name": "Sandpaper",
         "image": "https://i.ibb.co/4KzJ3nt/sandpaper.png",
         "description": "3M Garnet Sandpaper, 9-Inch by 11-Inch, Assorted-Grit, 5-Sheet - 9040NA",
         "min_order_quantity": 1000,
@@ -27,7 +27,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "paint-roller",
+        "name": "Paint-roller",
         "image": "https://i.ibb.co/d48BVhL/paint-roller.png",
         "description": "Wooster Brush BR006-9 Acme Roller Frame 5-Wire, 9-Inch",
         "min_order_quantity": 1000,
@@ -36,7 +36,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "nut",
+        "name": "Nut",
         "image": "https://i.ibb.co/fd0HQYG/nut.png",
         "description": "White Knight 1707S-20AM Chrome M12x1.50 Bulge Acorn Lug Nut, 20 Pack",
         "min_order_quantity": 1000,
@@ -54,7 +54,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "hacksaw",
+        "name": "Hacksaw",
         "image": "https://i.ibb.co/n3RxJMr/hacksaw.png",
         "description": "Milwaukee 48-22-0012 Compact Hand Operated Hack Saw w/ Tool-Less Blade Change (10 Inch Blade Included)",
         "min_order_quantity": 1000,
@@ -72,7 +72,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "drill-machine",
+        "name": "Drill-machine",
         "image": "https://i.ibb.co/Y8X5T9k/drill-machine.png",
         "description": "BLACK+DECKER 20V MAX* POWERECONNECT Cordless Drill/Driver + 30 pc. Kit (LD120VA)",
         "min_order_quantity": 1000,
@@ -81,7 +81,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "electric-saw",
+        "name": "Electric-saw",
         "image": "https://i.ibb.co/JqKjp87/electric-saw.png",
         "description": "BLACK+DECKER Electric Hand Saw with Storage Bag, 3.4-Amp (PHS550B)",
         "min_order_quantity": 1000,
@@ -99,7 +99,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "wrench",
+        "name": "Wrench",
         "image": "https://i.ibb.co/JHvNnNW/wrench.png",
         "description": "DEWALT Combination Ratcheting Wrench Set, 8-Piece SAE (DWMT74733)",
         "min_order_quantity": 1000,
@@ -108,7 +108,7 @@
         "email": "ezabul.bary@gmail.com"
     },
     {
-        "name": "shovel",
+        "name": "Shovel",
         "image": "https://i.ibb.co/ctTg7ck/shovel.png",
         "description": "MARTHA STEWART MTS-MDS1 27-Inch Mini Round Pt. Digging Shovel w/8-Inch Heat-Treated Rust-Resistant Solid Steel Blade",
         "min_order_quantity": 1000,
