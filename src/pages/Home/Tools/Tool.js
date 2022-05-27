@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../Shared/Button';
 
 const Tool = ({ tool }) => {
-    const { name, image, description, min_order_quantity, available_quantity, price } = tool
+    const {  name, image, description, min_order_quantity, available_quantity, price } = tool
     return (
         < div class="card lg:max-w-lg bg-base-100 shadow-xl" >
             <figure class="px-10 pt-10">
