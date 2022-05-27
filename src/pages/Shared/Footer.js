@@ -34,7 +34,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-center px-10 py-10 border-t border-base-300">
-                <p>Copyright © 2022 - All right reserved by JanTik Ltd</p>
+                <p>Copyright © 2022 - All right reserved by JanTrik Ltd</p>
             </div>
         </footer>
     );
