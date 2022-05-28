@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import Blogs from './pages/Blogs/Blogs';
 import About from './pages/Home/About';
 import Home from './pages/Home/Home';
@@ -8,7 +8,6 @@ import Purchase from './pages/Purchase/Purchase';
 import Footer from './pages/Shared/Footer';
 import NavBar from './pages/Shared/NavBar';
 import NotFound from './pages/Shared/NotFound';
-import 'react-toastify/dist/ReactToastify.css';
 import Register from './pages/Login/Register';
 import Login from './pages/Login/Login';
 import RequireAuth from './pages/Login/RequireAuth';

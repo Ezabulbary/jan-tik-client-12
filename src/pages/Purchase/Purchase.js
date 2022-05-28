@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import usePurchase from '../../hooks/usePurchase';
@@ -10,8 +10,9 @@ const Purchase = () => {
     const [user, loading] = useAuthState(auth);
     const { toolsId } = useParams();
     const [purchase, setPurchase] = usePurchase(toolsId);
-    const { _id, name, image, description, min_order_quantity, available_quantity, price } = purchase;
+    const { name, image, description, min_order_quantity, available_quantity, price } = purchase;
     const [buttonDisabled, setButtonDisabled] = useState(false);
+    const navigate = useNavigate();
 
     if (loading) {
         return <Loading></Loading>
@@ -58,7 +59,8 @@ const Purchase = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    setPurchase(data.item)
+                    setPurchase(data.item);
+                    navigate('/dashboard/myOrders')
                 })
         }
     }
