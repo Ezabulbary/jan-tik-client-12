@@ -12,7 +12,8 @@ const Tools = () => {
     }, [])
     return (
         <div>
-            <h2 className='text-5xl font-bold text-center py-10'>Tools</h2>
+            <h2 className='text-primary text-xl text-center font-bold uppercase'>Tools</h2>
+            <h2 className='text-3xl font-bold text-center py-10'>Find the product of your choice</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     homePageTools.map(tool => <Tool
