@@ -26,7 +26,7 @@ const Purchase = () => {
             tools: purchase.name,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            pricePerUnit: purchase.price,
+            pricePerPiece: purchase.price,
             orderQuantity: event.target.quantity.value
         }
         console.log(toolsOrder)
@@ -121,7 +121,7 @@ const Purchase = () => {
                             <label htmlFor="quantity" className="label">
                                 <span className="label-text">How much product do you want?</span>
                             </label>
-                            <input type="number" name="quantity" onChange={handleDisabled} placeholder="Quantity of Products" required className="input input-bordered" />
+                            <input type="number" name="quantity" onChange={handleDisabled} defaultValue={min_order_quantity} required className="input input-bordered" />
                         </div>
                         <div className="form-control mt-6">
                             <button type='submit' disabled={buttonDisabled} className="btn btn-primary">Order Purchase</button>

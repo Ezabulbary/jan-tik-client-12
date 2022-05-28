@@ -6,12 +6,14 @@ import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import SocialLogin from './SocialLogin';
+import useToken from '../../hooks/useToken';
 
 const Login = () => {
     const [resetEmail, setResetEmail] = useState('');
     const [sendPasswordResetEmail, rSending, rError] = useSendPasswordResetEmail(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user);
 
     let signInError;
     const navigate = useNavigate();
@@ -19,10 +21,10 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, from, navigate])
+    }, [token, from, navigate])
 
     if (loading || rSending) {
         return <Loading></Loading>
