@@ -4,7 +4,7 @@ import Button from '../Shared/Button';
 
 const About = () => {
     return (
-        <div class="hero h-screen bg-white">
+        <div class="hero md:min-h-screen bg-white">
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src={aboutImg} class="rounded-lg shadow-2xl" />
                 <div className='sm:p-20 md:p-10'>

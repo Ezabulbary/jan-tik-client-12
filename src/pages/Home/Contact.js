@@ -8,7 +8,6 @@ const Contact = () => {
             background: `url(${ContactImg})`
         }}>
             <div className='text-center py-24 my-3'>
-                <h3 className='text-primary  text-xl font-bold uppercase pb-5'>Contact Us</h3>
                 <h2 className='text-4xl text-white pb-5'>Stay connected with us</h2>
                 <input type="text" placeholder="Email Address" className="input w-full max-w-xs m-4" />
                 <br />

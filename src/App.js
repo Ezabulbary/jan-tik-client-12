@@ -11,8 +11,10 @@ import NotFound from './pages/Shared/NotFound';
 import 'react-toastify/dist/ReactToastify.css';
 import Register from './pages/Login/Register';
 import Login from './pages/Login/Login';
+import RequireAuth from './pages/Login/RequireAuth';
 import Portfolio from './pages/Protfolio/Protfolio';
 import Contact from './pages/Home/Contact';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -25,7 +27,16 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
-        <Route path='/tools' element={<Purchase></Purchase>}></Route>
+        <Route path='/tools' element={
+          <RequireAuth>
+            <Purchase></Purchase>
+          </RequireAuth>}></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
+          </RequireAuth>}>
+            
+          </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
