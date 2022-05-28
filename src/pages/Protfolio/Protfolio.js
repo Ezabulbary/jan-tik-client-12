@@ -9,11 +9,11 @@ const Portfolio = () => {
     return (
         <div>
 
-            <div class="md:flex justify-between items-center my-20">
-                <div class="m-5 md:m-10">
+            <div className="md:flex justify-between items-center my-20">
+                <div className="m-5 md:m-10">
                     <div>
-                        <h1 class="text-4xl py-5">Hello there, my lovely companion.</h1>
-                        <p className='text-2xl'>I am<span class="text-accent font-bold"> Ezabul Bari</span></p>
+                        <h1 className="text-4xl py-5">Hello there, my lovely companion.</h1>
+                        <p className='text-2xl'>I am<span className="text-accent font-bold"> Ezabul Bari</span></p>
                     </div>
                     <p className='text-justify'>
                         Front-end developer specialized in web development.All stages of the development cycle for dynamic web applications are familiar to me.HTML5, CSS3, Bootstrap, Tailwind, JavaScript, ES-6, nodejs, mongoDB and learning other web programming stacks. Strong project management and customer service experience. I also familiar with algorithm data structure and OOP. I am very much interested in Linux. Software Engineering and Cyber Security is my favorite field.
@@ -25,16 +25,16 @@ const Portfolio = () => {
                         <Button>Email</Button>
                     </div>
                 </div>
-                <div class="lg:max-w-lg m-10">
+                <div className="lg:max-w-lg m-10">
                     <img src={Cover} alt='' />
                 </div>
             </div>
 
-            <div class="bg-base-200 p-20">
+            <div className="bg-base-200 p-20">
                 <div>
-                    <h1 class="text-xl font-bold">ACADEMIC CREDENTIALS</h1>
-                    <div class="overflow-x-auto">
-                        <table class="table w-full">
+                    <h1 className="text-xl font-bold">ACADEMIC CREDENTIALS</h1>
+                    <div className="overflow-x-auto">
+                        <table className="table w-full">
                             <thead>
                                 <tr>
                                     <th>Examination</th>
@@ -70,9 +70,9 @@ const Portfolio = () => {
                         </table>
                     </div>
 
-                    <h1 class="text-xl font-bold mt-10">PERSONAL INFORMATION</h1>
-                    <div class="overflow-x-auto">
-                        <table class="table w-full mt-5">
+                    <h1 className="text-xl font-bold mt-10">PERSONAL INFORMATION</h1>
+                    <div className="overflow-x-auto">
+                        <table className="table w-full mt-5">
                             <tbody>
                                 <tr>
                                     <th>Date of Birth</th>
@@ -102,26 +102,26 @@ const Portfolio = () => {
 
             <h1 className='text-4xl text-center font-bold mt-5'>My Top 3 Projects</h1>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 my-20'>
-                <div class="card lg:max-w-lg bg-base-100 shadow-xl image-full">
+                <div className="card lg:max-w-lg bg-base-100 shadow-xl image-full">
                     <figure><img src={Site1} alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-center">
+                    <div className="card-body">
+                        <div className="card-actions justify-center">
                             <a href="https://weave-dreams-to-paint.firebaseapp.com/" target="_blank"><Button>Live Site</Button></a>
                         </div>
                     </div>
                 </div>
-                <div class="card lg:max-w-lg bg-base-100 shadow-xl image-full">
+                <div className="card lg:max-w-lg bg-base-100 shadow-xl image-full">
                     <figure><img src={Site2} alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-center">
+                    <div className="card-body">
+                        <div className="card-actions justify-center">
                             <a href="https://groseriar-shop-claint.web.app/home" target="_blank"><Button>Live Site</Button></a>
                         </div>
                     </div>
                 </div>
-                <div class="card lg:max-w-lg bg-base-100 shadow-xl image-full">
+                <div className="card lg:max-w-lg bg-base-100 shadow-xl image-full">
                     <figure><img src={Site3} alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <div class="card-actions justify-center">
+                    <div className="card-body">
+                        <div className="card-actions justify-center">
                             <a href="https://blue-birds-shop.netlify.app/" target="_blank"><Button>Live Site</Button></a>
                         </div>
                     </div>

@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useTools from '../../../hooks/useTools';
 import Tool from './Tool';
 
 const Tools = () => {
-    const [tools, setTools] = useState([]);
-    const updateTools = tools.reverse();
-    const homePageTools = updateTools.slice(0, 6)
-    useEffect(() => {
-        fetch('http://localhost:5000/tools')
-            .then(res => res.json())
-            .then(data => setTools(data))
-    }, [])
+    const [tools] = useTools();
     return (
         <div>
             <h2 className='text-5xl font-bold text-center'>Inventory</h2>
             <h2 className='text-3xl font-bold text-center py-10'>Find the product of your choice</h2>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
-                    homePageTools.map(tool => <Tool
+                    tools.map(tool => <Tool
                         key={tool._id}
                         tool={tool}
-                    ></Tool>)
+                    ></Tool>).slice(0, 6)
                 }
             </div>
         </div>

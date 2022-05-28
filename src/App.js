@@ -27,7 +27,7 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
-        <Route path='/tools' element={
+        <Route path='/tools/:toolsId' element={
           <RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>}></Route>
@@ -35,7 +35,7 @@ function App() {
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>}>
-            
+
           </Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>

@@ -27,7 +27,7 @@ const Blogs = () => {
 
             <p className='text-xl font-bold'>Q-5. You have an array of products.Each product has a name, price, description, etc.How will you implement a search to find products by name?</p>
             <p className='pb-10 text-justify'>
-                <div class="mockup-code">
+                <div className="mockup-code">
                     <pre data-prefix="">
                         <code>
                             productsCollection.find(query).project(name: 1)
