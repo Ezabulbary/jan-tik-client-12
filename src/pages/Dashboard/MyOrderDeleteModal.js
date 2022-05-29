@@ -18,13 +18,13 @@ const MyOrderDeleteModal = ({ _id }) => {
             {/* <!-- The button to open modal --> */}
 
             {/* <!-- Put this part before </body> tag --> */}
-            <input type="checkbox" id="order-delete-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle bg-transparent">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg">Are you sure you want to Delete</h3>
-                    <div class="modal-action">
-                        <label for="order-delete-modal" class="btn btn-xs ">Cancel</label>
-                        <label onClick={() => handleOrderDel(_id)} for="order-delete-modal" class="btn btn-xs btn-error">Delete</label>
+            <input type="checkbox" id="order-delete-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle bg-transparent">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Are you sure you want to Delete</h3>
+                    <div className="modal-action">
+                        <label htmlFor="order-delete-modal" className="btn btn-xs ">Cancel</label>
+                        <label onClick={() => handleOrderDel(_id)} htmlFor="order-delete-modal" className="btn btn-xs btn-error">Delete</label>
                     </div>
                 </div>
             </div>

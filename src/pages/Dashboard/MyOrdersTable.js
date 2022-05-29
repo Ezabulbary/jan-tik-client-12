@@ -15,10 +15,10 @@ const MyOrdersTable = ({ order, setOrderModal, orderModal }) => {
                 <td>{order.transactionId}</td>
                 {
                     // !order.paid && <td><button onClick={() => handleOrderDel(order._id)} className='btn btn-xs'>Delete</button></td>
-                    !order.paid && <td><label onClick={setOrderModal} for="order-delete-modal" class="btn btn-xs">Delete</label></td>
+                    !order.paid && <td><label onClick={setOrderModal} htmlFor="order-delete-modal" className="btn btn-xs">Delete</label></td>
                 }
 
-                {/* <button class="btn btn-xs">delete</button> */}
+                {/* <button className="btn btn-xs">delete</button> */}
             </tr>
             {orderModal && <MyOrderDeleteModal _id={order._id}></MyOrderDeleteModal>}
         </>

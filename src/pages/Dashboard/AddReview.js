@@ -32,16 +32,16 @@ const AddReview = () => {
             <form onSubmit={handleReview} className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
                 <h1 className='text-2xl font-bold text-center py-5'>Please Add your Valuable FeedBack</h1>
                 <div className='card-body'>
-                    <textarea name='review' class="textarea input-bordered lg:max-w-lg" placeholder="Please Add your Valuable FeedBack"></textarea>
+                    <textarea name='review' className="textarea input-bordered lg:max-w-lg" placeholder="Please Add your Valuable FeedBack"></textarea>
 
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Ratings</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Ratings</span>
                         </label>
-                        <input type="text" name="rating" placeholder="Please Give us a Rating" class="input input-bordered" />
+                        <input type="text" name="rating" placeholder="Please Give us a Rating" className="input input-bordered" />
                     </div>
 
-                    <input type="submit" value='add'  class="btn w-full max-w-xs my-2" />
+                    <input type="submit" value='add' className="btn w-full max-w-xs my-2" />
                 </div>
             </form>
         </div>
