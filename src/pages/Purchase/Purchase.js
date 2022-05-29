@@ -27,7 +27,7 @@ const Purchase = () => {
             tools: purchase.name,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            pricePerPiece: purchase.price,
+            pricePerUnit: purchase.price,
             orderQuantity: event.target.quantity.value
         }
         console.log(toolsOrder)

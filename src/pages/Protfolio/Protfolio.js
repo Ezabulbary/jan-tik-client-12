@@ -60,7 +60,7 @@ const Portfolio = () => {
                                     <td>Madrasha</td>
                                 </tr>
                                 <tr>
-                                    <th>HSC/Alim</th>
+                                    <th>SSC/Dakhil</th>
                                     <td>5.00 (out of 5.00)</td>
                                     <td>2012</td>
                                     <td>Science</td>

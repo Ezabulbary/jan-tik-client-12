@@ -1,12 +1,15 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import MyOrdersTable from './MyOrdersTable';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
     const [orders, setOrders] = useState([]);
-    const [orderModal, setOrderModal] = useState(null)
+    const [orderModal, setOrderModal] = useState(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (user) {
@@ -16,24 +19,32 @@ const MyOrders = () => {
                     "authorization": `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
-                .then(res => res.json())
+                .then(res => {
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth)
+                        localStorage.removeItem('accessToken')
+                        navigate('/')
+                    }
+
+                    return res.json()
+                })
                 .then(data => setOrders(data))
         }
-    }, [user])
+    }, [user]);
+
     return (
         <div>
-            <h1 className='text-2xl text-center'>{user?.displayName} Orders {orders.length} Tools</h1>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
                         <tr>
-                            <th>Product</th>
+                            <th>Tools</th>
                             <th>Customer</th>
                             <th>CustomerEmail</th>
                             <th>OrderQuantity</th>
                             <th>payment</th>
                             <th>Paid</th>
-                            <th>TransictionId</th>
+                            <th>TransactionId</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -41,8 +52,8 @@ const MyOrders = () => {
                         {
                             orders.map(order => <MyOrdersTable key={order._id}
                                 order={order}
-                                setOrderModal={setOrderModal}
                                 orderModal={orderModal}
+                                setOrderModal={setOrderModal}
                             ></MyOrdersTable>)
                         }
                     </tbody>
