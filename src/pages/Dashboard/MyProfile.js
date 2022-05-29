@@ -32,7 +32,7 @@ const MyProfile = () => {
     return (
         <div className='hero min-h-screen bg-base-200 py-10'>
             <form onSubmit={handleMyProfile}>
-                <h1 className='text-5xl font-bold'>MyProfile</h1>
+                <h1 className='text-3xl font-bold'>Update Your Profile</h1>
 
                     <div class="form-control w-full max-w-xs">
                         <label class="label">

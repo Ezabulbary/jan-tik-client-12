@@ -36,9 +36,6 @@ const Register = () => {
         if (createUserWithEmailAndPassword) {
             toast.success('Successfully Account Created')
         }
-        else if (updateProfile) {
-            toast.success('update done')
-        }
     };
 
 
