@@ -3,7 +3,7 @@ import React from 'react';
 const ManageOrderRow = ({ index, manage }) => {
 
     const handleShipped = (id) => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://fathomless-lake-35584.herokuapp.com/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -20,7 +20,7 @@ const ManageOrderRow = ({ index, manage }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm('are you sure you want to delete??')
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://fathomless-lake-35584.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())

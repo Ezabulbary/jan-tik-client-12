@@ -32,7 +32,7 @@ const Purchase = () => {
         }
         console.log(toolsOrder)
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fathomless-lake-35584.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const Purchase = () => {
 
         if (event.target.quantity.value) {
             const newQuantity = available_quantity - parseInt(event.target.quantity.value);
-            fetch(`http://localhost:5000/tools/${toolsId}`, {
+            fetch(`https://fathomless-lake-35584.herokuapp.com/addTools/${toolsId}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -15,7 +15,7 @@ const MyProfile = () => {
             phone: e.target.number.value,
             linkedin: e.target.linkedin.value,
         }
-        fetch(`http://localhost:5000/myprofile/${user?.email}`, {
+        fetch(`https://fathomless-lake-35584.herokuapp.com/myprofile/${user?.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

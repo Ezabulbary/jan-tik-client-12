@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading';
 import MakeAdminRow from './MakeAdminRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()))
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fathomless-lake-35584.herokuapp.com/user').then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>

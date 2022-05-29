@@ -13,7 +13,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/orders?customerEmail=${user?.email}`, {
+            fetch(`https://fathomless-lake-35584.herokuapp.com/orders?customerEmail=${user?.email}`, {
                 method: "GET",
                 headers: {
                     "authorization": `Bearer ${localStorage.getItem('accessToken')}`

@@ -38,7 +38,7 @@ const AddProduct = () => {
                         price: data.price,
 
                     }
-                    fetch('http://localhost:5000/addProduct', {
+                    fetch('https://fathomless-lake-35584.herokuapp.com/addProduct', {
                         method: "POST",
                         headers: {
                             'content-type': 'application/json',
@@ -49,12 +49,12 @@ const AddProduct = () => {
                         .then(res => res.json())
                         .then(inserted => {
                             if (inserted.insertedId) {
-                                toast.success('New Doctor successfully added');
+                                toast.success('New Product successfully added');
                                 reset();
                                 navigate('/dashboard/manageProducts');
                             }
                             else {
-                                toast.error('Failed to add the doctor')
+                                toast.error('Failed to add the product')
                             }
                         })
                 }
@@ -70,7 +70,7 @@ const AddProduct = () => {
                         <span className="label-text">Email</span>
                     </label>
                     <input
-                    readOnly
+                        readOnly
                         defaultValue={user?.email}
                         type="email"
                         placeholder="Your Email"

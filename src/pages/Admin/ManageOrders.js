@@ -6,9 +6,9 @@ import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrders = () => {
     const [manageOrder, setManageOrder] = useState([]);
-    
+
     useEffect(() => {
-        fetch('http://localhost:5000/manageOrder', {
+        fetch('https://fathomless-lake-35584.herokuapp.com/manageOrder', {
             method: "GET",
             headers: {
                 "authorization": `Bearer ${localStorage.getItem('accessToken')}`

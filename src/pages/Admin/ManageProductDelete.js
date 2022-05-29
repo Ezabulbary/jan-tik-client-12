@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const ManageProductDelete = ({ deleteTool, setDeleteTool, refetch }) => {
     const { _id, name } = deleteTool;
     const deleteProduct = id => {
-        fetch(`http://localhost:5000/allTools/${id}`, {
+        fetch(`https://fathomless-lake-35584.herokuapp.com/allTools/${id}`, {
             method: "DELETE",
             headers: {
                 'content-type': 'application/json',

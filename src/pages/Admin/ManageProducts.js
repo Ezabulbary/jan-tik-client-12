@@ -6,7 +6,7 @@ import ManageProductDetail from './ManageProductDetail';
 
 const ManageProducts = () => {
     const [deleteTool, setDeleteTool] = useState(null);
-    const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tools', {
+    const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('https://fathomless-lake-35584.herokuapp.com/tools', {
         method: "GET",
         headers: {
             'content-type': 'application/json',
