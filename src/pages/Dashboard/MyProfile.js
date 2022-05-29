@@ -52,28 +52,28 @@ const MyProfile = () => {
                         <span className="label-text">Education</span>
 
                     </label>
-                    <input name='education' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input name='education' type="text" required placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Location</span>
 
                     </label>
-                    <input name='location' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input name='location' type="text" required placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">PhoneNumber</span>
 
                     </label>
-                    <input name='number' type="number" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input name='number' type="number" required placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
                         <span className="label-text">Linkedin</span>
 
                     </label>
-                    <input name='linkedin' type="text" placeholder="Give your LinkedIn URL" className="input input-bordered w-full max-w-xs" />
+                    <input name='linkedin' type="text" required placeholder="Give your LinkedIn URL" className="input input-bordered w-full max-w-xs" />
                     <input className='btn w-full max-w-xs mt-4' type="submit" value='submit' />
                 </div>
             </form>

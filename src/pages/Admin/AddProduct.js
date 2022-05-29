@@ -63,7 +63,7 @@ const AddProduct = () => {
     return (
         <div className='hero min-h-screen bg-base-200 py-14'>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <h1 className='text-3xl font-bold'>Update Tools Add</h1>
+                <h1 className='text-3xl font-bold text-center pb-3'>Add New Product</h1>
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">

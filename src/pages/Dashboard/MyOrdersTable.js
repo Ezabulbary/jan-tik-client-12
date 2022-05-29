@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MyOrderDeleteModal from './MyOrderDeleteModal';
 
-const MyOrdersTable = ({ order, setOrderModal, orderModal }) => {
+const MyOrdersTable = ({ order, orderModal, setOrderModal }) => {
     return (
         <>
             <tr>

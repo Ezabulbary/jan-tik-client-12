@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const MyOrderDeleteModal = ({ _id }) => {
     const handleOrderDel = (id) => {
@@ -8,8 +9,11 @@ const MyOrderDeleteModal = ({ _id }) => {
         })
             .then(res => res.json())
             .then(data => {
-                // console.log(data);
-                window.location.reload();
+                // console.log(data)
+                if (data.deletedCount) {
+                    toast.success(`Product is Deleted`)
+                    window.location.reload();
+                }
             })
     }
 
