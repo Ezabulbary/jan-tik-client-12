@@ -30,6 +30,7 @@ const AddReview = () => {
     return (
         <div className='hero min-h-screen bg-base-200'>
             <form onSubmit={handleReview} className='card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100'>
+                <h1 className='text-2xl font-bold text-center py-5'>Please Add your Valuable FeedBack</h1>
                 <div className='card-body'>
                     <textarea name='review' class="textarea input-bordered lg:max-w-lg" placeholder="Please Add your Valuable FeedBack"></textarea>
 
