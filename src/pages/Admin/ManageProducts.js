@@ -6,7 +6,6 @@ import ManageProductDetail from './ManageProductDetail';
 
 const ManageProducts = () => {
     const [deleteTool, setDeleteTool] = useState(null);
-    console.log(deleteTool);
     const { data: tools, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tools', {
         method: "GET",
         headers: {

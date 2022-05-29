@@ -5,7 +5,8 @@ import auth from '../../firebase.init';
 import ManageOrderRow from './ManageOrderRow';
 
 const ManageOrders = () => {
-    const [manageOrder, setManageOrder] = useState([])
+    const [manageOrder, setManageOrder] = useState([]);
+    
     useEffect(() => {
         fetch('http://localhost:5000/manageOrder', {
             method: "GET",
