@@ -11,7 +11,6 @@ import NotFound from './pages/Shared/NotFound';
 import Register from './pages/Login/Register';
 import Login from './pages/Login/Login';
 import RequireAuth from './pages/Login/RequireAuth';
-import Portfolio from './pages/Protfolio/Protfolio';
 import Contact from './pages/Home/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
 import MyProfile from './pages/Dashboard/MyProfile';
@@ -33,7 +32,6 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path='/tools/:toolsId' element={
           <RequireAuth>
