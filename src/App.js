@@ -26,7 +26,7 @@ import Payment from './pages/Dashboard/Payment';
 
 function App() {
   return (
-    <div className='xl:max-w-7xl mx-auto'>
+    <div>
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
