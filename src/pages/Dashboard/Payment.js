@@ -22,9 +22,10 @@ const Payment = () => {
         <div className='m-10'>
             <div className="card w-50 max-w-md bg-base-100 shadow-xl my-10">
                 <div className="card-body">
+                    <h3>Hello, {order.customerName}</h3>
                     <h2 className="card-title">Please Pay for {order.tools}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    <p>Please Pay {order.price}</p>
+                    <p></p>
+                    <p>Please Pay {order.pricePerPiece}</p>
                 </div>
             </div>
             <div className="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
