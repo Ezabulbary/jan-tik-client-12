@@ -33,7 +33,7 @@ const Footer = () => {
                     <Link to='/' className="link link-hover">Github</Link>
                 </div>
             </div>
-            <div className="text-center px-10 py-10 border-t border-base-300">
+            <div className="text-center px-10 py-3 border-t border-base-300">
                 <p>Copyright © 2022 - All right reserved by JanTrik Ltd</p>
             </div>
         </footer>

@@ -5,8 +5,8 @@ const Reviews = () => {
     const [reviews] = useReview()
     return (
         <div className='py-32'>
-            <h2 className='text-3xl font-bold text-center py-10'>Reviews</h2>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+            <h2 className='text-4xl font-bold text-center pb-10'>Reviews</h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     reviews.map(review => <div key={review._id} className="card lg:-max-w-lg bg-base-100 shadow-xl">
                         <div className="card-body">
