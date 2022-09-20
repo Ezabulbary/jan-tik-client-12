@@ -5,11 +5,12 @@ const CheckoutForm = ({ order }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [cardError, setCardError] = useState('');
+    const [success, setSuccess] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    const { pricePerUnit } = order;
+    const { pricePerUnit, customerName, customerEmail } = order;
 
-    useEffect(() =>{
+    useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
             method: "POST",
             headers: {
@@ -18,12 +19,12 @@ const CheckoutForm = ({ order }) => {
             },
             body: JSON.stringify({ pricePerUnit })
         })
-        .then(res => res.json())
-        .then(data => {
-            if (data?.clientSecret){
-                setClientSecret(data.clientSecret);
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data?.clientSecret) {
+                    setClientSecret(data.clientSecret);
+                }
+            })
     }, [pricePerUnit]);
 
     const handleSubmit = async (event) => {
@@ -52,9 +53,32 @@ const CheckoutForm = ({ order }) => {
         });
 
         setCardError(error?.message || '');
+        setSuccess('');
+
+        //confirm card payment
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: customerName,
+                        email: customerEmail,
+                    },
+                },
+            },
+        );
+
+        if(intentError){
+            setCardError(error?.message);
+        }
+        else{
+            setCardError('');
+            setSuccess('Congrats! Your payment is completed')
+        }
 
     };
-    
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -81,6 +105,9 @@ const CheckoutForm = ({ order }) => {
 
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
+            }
+            {
+                success && <p className='text-green-500'>{success}</p>
             }
         </>
     );

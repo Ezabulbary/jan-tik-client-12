@@ -28,7 +28,7 @@ const Payment = () => {
         <div className='m-10'>
             <div className="card w-50 max-w-md bg-base-100 shadow-xl my-10">
                 <div className="card-body">
-                    <h3>Hello, {order.name}</h3>
+                    <h3>Hello, {order.customerName}</h3>
                     <h2 className="card-title">Please Pay for <span className='text-orange-400'>{order.tools}</span></h2>
                     <p>Please Pay ${order.pricePerUnit}</p>
                 </div>
